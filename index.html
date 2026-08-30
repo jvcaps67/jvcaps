@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>JV CAPS | Gorras Premium</title>
 
 <style>
@@ -15,175 +14,196 @@
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#080808;
-  color:white;
+  background:#08090b;
+  color:#fff;
 }
 
 header{
-  min-height:85vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   text-align:center;
-  padding:30px 20px;
-  background:
-    radial-gradient(circle at top,#5b0000 0%,#180000 35%,#080808 70%);
+  padding:45px 20px 35px;
+  background:radial-gradient(circle at top,#252525,#08090b 70%);
+  border-bottom:1px solid #292929;
 }
 
 .logo{
-  font-size:58px;
+  font-size:48px;
   font-weight:900;
-  letter-spacing:5px;
-  color:#fff;
-  text-shadow:0 0 20px #ff0000;
+  letter-spacing:3px;
 }
 
 .logo span{
   color:#d4af37;
 }
 
-header p{
-  margin:18px auto 28px;
-  max-width:500px;
-  color:#ccc;
-  font-size:18px;
-  line-height:1.6;
+.subtitulo{
+  color:#999;
+  margin-top:8px;
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
 }
 
-.btn{
-  display:inline-block;
-  padding:15px 25px;
-  border-radius:30px;
-  background:linear-gradient(135deg,#d4af37,#fff0a0,#b8860b);
-  color:#080808;
-  font-weight:900;
-  text-decoration:none;
-  box-shadow:0 0 20px rgba(212,175,55,.35);
-}
-
-section{
-  padding:55px 18px;
-  max-width:1200px;
-  margin:auto;
+.contenedor{
+  width:92%;
+  max-width:600px;
+  margin:30px auto 60px;
 }
 
 .titulo{
-  text-align:center;
-  margin-bottom:35px;
-}
-
-.titulo h2{
-  font-size:32px;
-  color:#d4af37;
-  margin-bottom:10px;
-}
-
-.titulo p{
-  color:#999;
-}
-
-.catalogo{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;
+  font-size:26px;
+  font-weight:800;
+  margin-bottom:20px;
 }
 
 .producto{
-  background:#111;
+  background:linear-gradient(145deg,#191a1d,#0e0f11);
   border:1px solid #292929;
   border-radius:20px;
   overflow:hidden;
-  transition:.3s;
-}
-
-.producto:hover{
-  transform:translateY(-5px);
-  border-color:#d4af37;
+  margin-bottom:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
 }
 
 .producto img{
   width:100%;
-  height:300px;
+  height:320px;
   object-fit:cover;
   display:block;
+  background:#111;
 }
 
 .info{
-  padding:20px;
+  padding:22px;
 }
 
-.info h3{
-  font-size:20px;
-  margin-bottom:8px;
+.nombre{
+  font-size:23px;
+  font-weight:800;
 }
 
 .precio{
   color:#d4af37;
-  font-size:22px;
+  font-size:28px;
   font-weight:900;
-  margin-bottom:15px;
+  margin-top:8px;
 }
 
-.stock{
-  display:inline-block;
-  color:#65ff8a;
-  font-size:13px;
-  font-weight:bold;
-  margin-bottom:15px;
+.formulario{
+  background:#111214;
+  border:1px solid #292929;
+  border-radius:20px;
+  padding:24px;
 }
 
-.pedir{
+label{
   display:block;
-  text-align:center;
-  padding:13px;
-  background:#b00000;
-  color:white;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+input,textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:18px;
   border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
+  border:1px solid #333;
+  background:#08090b;
+  color:#fff;
+  font-size:16px;
+  outline:none;
 }
 
-.pedir:hover{
-  background:#e00000;
+textarea{
+  resize:none;
 }
 
-.banner{
-  margin-top:20px;
-  padding:40px 20px;
-  border-radius:25px;
+input:focus,textarea:focus{
+  border-color:#d4af37;
+}
+
+.entrega{
+  display:flex;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.opcion{
+  flex:1;
+  padding:16px 10px;
+  border:1px solid #333;
+  border-radius:14px;
+  background:#0b0c0e;
   text-align:center;
-  background:linear-gradient(135deg,#170000,#310000,#0b0b0b);
-  border:1px solid #5d0000;
+  cursor:pointer;
 }
 
-.banner h2{
+.opcion input{
+  width:auto;
+  margin:0 5px 0 0;
+}
+
+.opcion.activa{
+  border-color:#d4af37;
+  background:#19160c;
+}
+
+.direccion{
+  display:none;
+}
+
+.resumen{
+  background:#090a0c;
+  border:1px solid #292929;
+  border-radius:15px;
+  padding:20px;
+  margin-top:5px;
+}
+
+.fila{
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0;
+  color:#aaa;
+}
+
+.total{
+  border-top:1px solid #333;
+  padding-top:15px;
+  margin-top:15px;
+  color:#fff;
+  font-size:24px;
+  font-weight:900;
+}
+
+.total span:last-child{
   color:#d4af37;
-  margin-bottom:12px;
+}
+
+.boton{
+  width:100%;
+  border:0;
+  margin-top:20px;
+  padding:17px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#d4af37,#a67c00);
+  color:#080808;
+  font-size:17px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.nota{
+  text-align:center;
+  color:#666;
+  font-size:12px;
+  margin-top:15px;
 }
 
 footer{
   text-align:center;
-  padding:35px 20px;
-  border-top:1px solid #222;
-  color:#777;
-}
-
-footer strong{
-  color:#d4af37;
-}
-
-@media(max-width:600px){
-  .logo{
-    font-size:43px;
-  }
-
-  header{
-    min-height:75vh;
-  }
-
-  .producto img{
-    height:330px;
-  }
+  padding:25px;
+  color:#555;
+  font-size:13px;
 }
 </style>
 </head>
@@ -191,155 +211,243 @@ footer strong{
 <body>
 
 <header>
-
-<div>
   <div class="logo">JV <span>CAPS</span></div>
-
-  <p>
-    Gorras premium para quienes buscan estilo,
-    calidad y personalidad.
-  </p>
-
-  <a href="#catalogo" class="btn">
-    VER CATÁLOGO
-  </a>
-</div>
-
+  <div class="subtitulo">Gorras Premium</div>
 </header>
 
+<div class="contenedor">
 
-<section id="catalogo">
+  <div class="titulo">🧢 Elige tu gorra</div>
 
-<div class="titulo">
-  <h2>🔥 GORRAS DISPONIBLES</h2>
-  <p>Encuentra tu próximo estilo.</p>
-</div>
+  <div class="producto">
 
+    <!-- AQUÍ PONDRÁS TU IMAGEN -->
+    <img src="gorra1.jpg" alt="Gorra Premium JV CAPS">
 
-<div class="catalogo">
+    <div class="info">
+      <div class="nombre">Gorra Premium</div>
+      <div class="precio">$420 MXN</div>
+    </div>
 
+  </div>
 
-<!-- PRODUCTO 1 -->
+  <div class="formulario">
 
-<div class="producto">
+    <label for="nombre">Nombre</label>
 
-<img
-src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=90"
-alt="Gorra JV CAPS">
+    <input
+      type="text"
+      id="nombre"
+      placeholder="Escribe tu nombre"
+    >
 
-<div class="info">
+    <label>Forma de entrega</label>
 
-<h3>New Era Premium</h3>
+    <div class="entrega">
 
-<div class="precio">$799 MXN</div>
+      <label class="opcion activa" id="recoger">
+        <input
+          type="radio"
+          name="entrega"
+          value="Recoger"
+          checked
+          onchange="cambiarEntrega()"
+        >
+        🏪 Recoger
+      </label>
 
-<div class="stock">● EN STOCK</div>
+      <label class="opcion" id="domicilio">
+        <input
+          type="radio"
+          name="entrega"
+          value="Domicilio"
+          onchange="cambiarEntrega()"
+        >
+        🚗 Domicilio +$50
+      </label>
 
-<a
-class="pedir"
-href="https://wa.me/521XXXXXXXXXX?text=Hola%20JV%20CAPS,%20quiero%20la%20New%20Era%20Premium%20de%20$799"
-target="_blank">
-PEDIR AHORA
-</a>
+    </div>
 
-</div>
-</div>
+    <div class="direccion" id="campoDireccion">
 
+      <label for="direccion">Dirección:</label>
 
-<!-- PRODUCTO 2 -->
+      <textarea
+        id="direccion"
+        rows="3"
+        placeholder="Escribe tu dirección completa"
+      ></textarea>
 
-<div class="producto">
+    </div>
 
-<img
-src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=90"
-alt="Gorra JV CAPS">
+    <div class="resumen">
 
-<div class="info">
+      <div class="fila">
+        <span>🧢 Gorra × 1</span>
+        <strong>$420</strong>
+      </div>
 
-<h3>JV CAPS Classic</h3>
+      <div class="fila">
+        <span>🚗 Envío</span>
+        <strong id="envio">$0</strong>
+      </div>
 
-<div class="precio">$699 MXN</div>
+      <div class="fila total">
+        <span>Total</span>
+        <span id="total">$420</span>
+      </div>
 
-<div class="stock">● EN STOCK</div>
+    </div>
 
-<a
-class="pedir"
-href="https://wa.me/521XXXXXXXXXX?text=Hola%20JV%20CAPS,%20quiero%20la%20JV%20CAPS%20Classic%20de%20$699"
-target="_blank">
-PEDIR AHORA
-</a>
+    <button class="boton" onclick="hacerPedido()">
+      📲 PEDIR POR WHATSAPP
+    </button>
 
-</div>
-</div>
+    <div class="nota">
+      El pedido se enviará directamente por WhatsApp.
+    </div>
 
-
-<!-- PRODUCTO 3 -->
-
-<div class="producto">
-
-<img
-src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=90"
-alt="Gorra JV CAPS">
-
-<div class="info">
-
-<h3>JV CAPS Premium</h3>
-
-<div class="precio">$899 MXN</div>
-
-<div class="stock">● EN STOCK</div>
-
-<a
-class="pedir"
-href="https://wa.me/521XXXXXXXXXX?text=Hola%20JV%20CAPS,%20quiero%20la%20JV%20CAPS%20Premium%20de%20$899"
-target="_blank">
-PEDIR AHORA
-</a>
-
-</div>
-</div>
-
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="banner">
-
-<h2>¿BUSCAS UNA GORRA?</h2>
-
-<p style="color:#ccc;margin-bottom:22px;">
-Mándanos mensaje y pregunta por los modelos disponibles.
-</p>
-
-<a
-class="btn"
-href="https://wa.me/521XXXXXXXXXX"
-target="_blank">
-CONTACTAR POR WHATSAPP
-</a>
+  </div>
 
 </div>
-
-</section>
-
 
 <footer>
-
-<strong>JV CAPS</strong>
-
-<br><br>
-
-Gorras premium · Estilo · Calidad
-
-<br><br>
-
-© 2026 JV CAPS
-
+  © 2026 JV CAPS · Gorras Premium
 </footer>
+
+<script>
+
+function cambiarEntrega(){
+
+  const domicilio =
+    document.querySelector(
+      'input[name="entrega"]:checked'
+    ).value === "Domicilio";
+
+  const campo =
+    document.getElementById("campoDireccion");
+
+  const envio =
+    document.getElementById("envio");
+
+  const total =
+    document.getElementById("total");
+
+  const recoger =
+    document.getElementById("recoger");
+
+  const domicilioBtn =
+    document.getElementById("domicilio");
+
+  if(domicilio){
+
+    campo.style.display="block";
+
+    envio.textContent="$50";
+
+    total.textContent="$470";
+
+    recoger.classList.remove("activa");
+
+    domicilioBtn.classList.add("activa");
+
+  }else{
+
+    campo.style.display="none";
+
+    envio.textContent="$0";
+
+    total.textContent="$420";
+
+    domicilioBtn.classList.remove("activa");
+
+    recoger.classList.add("activa");
+  }
+}
+
+
+function hacerPedido(){
+
+  const nombre =
+    document.getElementById("nombre").value.trim();
+
+  const entrega =
+    document.querySelector(
+      'input[name="entrega"]:checked'
+    ).value;
+
+  const direccion =
+    document.getElementById("direccion").value.trim();
+
+  if(nombre===""){
+
+    alert("Por favor escribe tu nombre.");
+
+    return;
+  }
+
+  if(entrega==="Domicilio" && direccion===""){
+
+    alert("Por favor escribe tu dirección.");
+
+    return;
+  }
+
+  let mensaje =
+    "🔥 *NUEVO PEDIDO - JV CAPS* 🔥\n\n";
+
+  mensaje +=
+    "🧢 *Producto:* Gorra Premium\n";
+
+  mensaje +=
+    "💰 *Precio:* $420 MXN\n";
+
+  mensaje +=
+    "🔢 *Cantidad:* 1 gorra\n";
+
+  mensaje +=
+    "👤 *Cliente:* " + nombre + "\n";
+
+  mensaje +=
+    "🚚 *Entrega:* " + entrega + "\n";
+
+  if(entrega==="Domicilio"){
+
+    mensaje +=
+      "📍 *Dirección:* " + direccion + "\n";
+
+    mensaje +=
+      "🚗 *Envío:* $50 MXN\n";
+
+    mensaje +=
+      "💵 *TOTAL:* $470 MXN\n";
+
+  }else{
+
+    mensaje +=
+      "🚗 *Envío:* $0 MXN\n";
+
+    mensaje +=
+      "💵 *TOTAL:* $420 MXN\n";
+  }
+
+  mensaje +=
+    "\n✅ Quiero realizar este pedido.";
+
+  const numero="526143640750";
+
+  const url=
+    "https://wa.me/" +
+    numero +
+    "?text=" +
+    encodeURIComponent(mensaje);
+
+  window.location.href=url;
+}
+
+cambiarEntrega();
+
+</script>
 
 </body>
 </html>
