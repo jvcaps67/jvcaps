@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>JV CAPS | Gorras Premium</title>
 
 <style>
@@ -14,21 +15,23 @@
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#08090b;
+  background:#070707;
   color:#fff;
+  min-height:100vh;
 }
 
 header{
-  text-align:center;
   padding:45px 20px 35px;
-  background:radial-gradient(circle at top,#252525,#08090b 70%);
+  text-align:center;
+  background:
+    radial-gradient(circle at top,#302b18 0%,#111 38%,#070707 75%);
   border-bottom:1px solid #292929;
 }
 
 .logo{
-  font-size:48px;
+  font-size:52px;
   font-weight:900;
-  letter-spacing:3px;
+  letter-spacing:4px;
 }
 
 .logo span{
@@ -36,37 +39,37 @@ header{
 }
 
 .subtitulo{
-  color:#999;
   margin-top:8px;
-  font-size:14px;
-  letter-spacing:2px;
+  color:#aaa;
+  font-size:13px;
+  letter-spacing:3px;
   text-transform:uppercase;
 }
 
 .contenedor{
   width:92%;
-  max-width:600px;
+  max-width:620px;
   margin:30px auto 60px;
 }
 
 .titulo{
-  font-size:26px;
+  font-size:25px;
   font-weight:800;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .producto{
-  background:linear-gradient(145deg,#191a1d,#0e0f11);
-  border:1px solid #292929;
-  border-radius:20px;
   overflow:hidden;
+  background:linear-gradient(145deg,#1b1b1b,#0d0d0d);
+  border:1px solid #303030;
+  border-radius:22px;
+  box-shadow:0 18px 45px rgba(0,0,0,.5);
   margin-bottom:25px;
-  box-shadow:0 15px 40px rgba(0,0,0,.4);
 }
 
 .producto img{
   width:100%;
-  height:320px;
+  height:330px;
   object-fit:cover;
   display:block;
   background:#111;
@@ -77,74 +80,88 @@ header{
 }
 
 .nombre{
-  font-size:23px;
+  font-size:24px;
   font-weight:800;
+}
+
+.descripcion{
+  color:#999;
+  margin-top:7px;
+  font-size:14px;
 }
 
 .precio{
   color:#d4af37;
-  font-size:28px;
+  font-size:30px;
   font-weight:900;
-  margin-top:8px;
+  margin-top:12px;
 }
 
 .formulario{
-  background:#111214;
-  border:1px solid #292929;
-  border-radius:20px;
-  padding:24px;
+  padding:25px;
+  background:linear-gradient(145deg,#151515,#0d0d0d);
+  border:1px solid #303030;
+  border-radius:22px;
 }
 
 label{
   display:block;
+  font-size:15px;
   font-weight:700;
   margin-bottom:8px;
 }
 
-input,textarea{
+input,
+textarea{
   width:100%;
-  padding:15px;
-  margin-bottom:18px;
-  border-radius:12px;
-  border:1px solid #333;
-  background:#08090b;
+  padding:16px;
+  margin-bottom:20px;
+  border:1px solid #363636;
+  border-radius:13px;
+  background:#080808;
   color:#fff;
   font-size:16px;
   outline:none;
 }
 
-textarea{
-  resize:none;
+input:focus,
+textarea:focus{
+  border-color:#d4af37;
 }
 
-input:focus,textarea:focus{
-  border-color:#d4af37;
+textarea{
+  resize:none;
+  min-height:90px;
 }
 
 .entrega{
   display:flex;
-  gap:12px;
+  gap:10px;
   margin-bottom:20px;
 }
 
 .opcion{
   flex:1;
-  padding:16px 10px;
-  border:1px solid #333;
-  border-radius:14px;
-  background:#0b0c0e;
+  padding:17px 10px;
+  margin:0;
   text-align:center;
+  background:#0a0a0a;
+  border:1px solid #353535;
+  border-radius:14px;
   cursor:pointer;
+  transition:.2s;
 }
 
 .opcion input{
   width:auto;
   margin:0 5px 0 0;
+  padding:0;
 }
 
 .opcion.activa{
   border-color:#d4af37;
-  background:#19160c;
+  background:#1c190e;
+  color:#d4af37;
 }
 
 .direccion{
@@ -152,24 +169,29 @@ input:focus,textarea:focus{
 }
 
 .resumen{
-  background:#090a0c;
-  border:1px solid #292929;
-  border-radius:15px;
   padding:20px;
   margin-top:5px;
+  background:#090909;
+  border:1px solid #2d2d2d;
+  border-radius:16px;
 }
 
 .fila{
   display:flex;
   justify-content:space-between;
-  margin:10px 0;
+  align-items:center;
+  margin:11px 0;
   color:#aaa;
 }
 
+.fila strong{
+  color:#fff;
+}
+
 .total{
+  padding-top:16px;
+  margin-top:16px;
   border-top:1px solid #333;
-  padding-top:15px;
-  margin-top:15px;
   color:#fff;
   font-size:24px;
   font-weight:900;
@@ -181,29 +203,50 @@ input:focus,textarea:focus{
 
 .boton{
   width:100%;
-  border:0;
+  padding:18px;
   margin-top:20px;
-  padding:17px;
+  border:0;
   border-radius:14px;
-  background:linear-gradient(135deg,#d4af37,#a67c00);
+  background:linear-gradient(135deg,#e4c04a,#a67c00);
   color:#080808;
   font-size:17px;
   font-weight:900;
   cursor:pointer;
+  box-shadow:0 8px 25px rgba(212,175,55,.18);
+}
+
+.boton:active{
+  transform:scale(.98);
 }
 
 .nota{
+  margin-top:14px;
   text-align:center;
   color:#666;
   font-size:12px;
-  margin-top:15px;
+  line-height:1.5;
 }
 
 footer{
-  text-align:center;
   padding:25px;
+  text-align:center;
   color:#555;
   font-size:13px;
+  border-top:1px solid #1d1d1d;
+}
+
+@media(max-width:500px){
+  .logo{
+    font-size:43px;
+  }
+
+  .producto img{
+    height:280px;
+  }
+
+  .entrega{
+    flex-direction:column;
+  }
 }
 </style>
 </head>
@@ -217,15 +260,16 @@ footer{
 
 <div class="contenedor">
 
-  <div class="titulo">🧢 Elige tu gorra</div>
+  <div class="titulo">🧢 Nuestra gorra</div>
 
   <div class="producto">
 
-    <!-- AQUÍ PONDRÁS TU IMAGEN -->
+    <!-- CAMBIA "gorra1.jpg" POR EL NOMBRE DE TU IMAGEN -->
     <img src="gorra1.jpg" alt="Gorra Premium JV CAPS">
 
     <div class="info">
       <div class="nombre">Gorra Premium</div>
+      <div class="descripcion">Calidad premium · JV CAPS</div>
       <div class="precio">$420 MXN</div>
     </div>
 
@@ -274,7 +318,6 @@ footer{
 
       <textarea
         id="direccion"
-        rows="3"
         placeholder="Escribe tu dirección completa"
       ></textarea>
 
@@ -304,7 +347,7 @@ footer{
     </button>
 
     <div class="nota">
-      El pedido se enviará directamente por WhatsApp.
+      Tu pedido se enviará directamente por WhatsApp.
     </div>
 
   </div>
@@ -319,12 +362,10 @@ footer{
 
 function cambiarEntrega(){
 
-  const domicilio =
-    document.querySelector(
-      'input[name="entrega"]:checked'
-    ).value === "Domicilio";
+  const seleccion =
+    document.querySelector('input[name="entrega"]:checked').value;
 
-  const campo =
+  const campoDireccion =
     document.getElementById("campoDireccion");
 
   const envio =
@@ -336,30 +377,30 @@ function cambiarEntrega(){
   const recoger =
     document.getElementById("recoger");
 
-  const domicilioBtn =
+  const domicilio =
     document.getElementById("domicilio");
 
-  if(domicilio){
+  if(seleccion === "Domicilio"){
 
-    campo.style.display="block";
+    campoDireccion.style.display = "block";
 
-    envio.textContent="$50";
+    envio.textContent = "$50";
 
-    total.textContent="$470";
+    total.textContent = "$470";
 
     recoger.classList.remove("activa");
 
-    domicilioBtn.classList.add("activa");
+    domicilio.classList.add("activa");
 
   }else{
 
-    campo.style.display="none";
+    campoDireccion.style.display = "none";
 
-    envio.textContent="$0";
+    envio.textContent = "$0";
 
-    total.textContent="$420";
+    total.textContent = "$420";
 
-    domicilioBtn.classList.remove("activa");
+    domicilio.classList.remove("activa");
 
     recoger.classList.add("activa");
   }
@@ -372,21 +413,19 @@ function hacerPedido(){
     document.getElementById("nombre").value.trim();
 
   const entrega =
-    document.querySelector(
-      'input[name="entrega"]:checked'
-    ).value;
+    document.querySelector('input[name="entrega"]:checked').value;
 
   const direccion =
     document.getElementById("direccion").value.trim();
 
-  if(nombre===""){
+  if(nombre === ""){
 
     alert("Por favor escribe tu nombre.");
 
     return;
   }
 
-  if(entrega==="Domicilio" && direccion===""){
+  if(entrega === "Domicilio" && direccion === ""){
 
     alert("Por favor escribe tu dirección.");
 
@@ -411,7 +450,7 @@ function hacerPedido(){
   mensaje +=
     "🚚 *Entrega:* " + entrega + "\n";
 
-  if(entrega==="Domicilio"){
+  if(entrega === "Domicilio"){
 
     mensaje +=
       "📍 *Dirección:* " + direccion + "\n";
@@ -434,15 +473,15 @@ function hacerPedido(){
   mensaje +=
     "\n✅ Quiero realizar este pedido.";
 
-  const numero="526143640750";
+  const numero = "526143640750";
 
-  const url=
+  const url =
     "https://wa.me/" +
     numero +
     "?text=" +
     encodeURIComponent(mensaje);
 
-  window.location.href=url;
+  window.location.href = url;
 }
 
 cambiarEntrega();
